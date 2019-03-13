@@ -1,0 +1,15 @@
+{
+  "name": "async-event-emitter",
+  "main": "src/index.js",
+  "author": "Thiago Macedo",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test mocha --reporter spec --exclude node_modules --recursive --watch './*/*.spec.js'"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1"
+  }
+}
