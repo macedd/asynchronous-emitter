@@ -1,6 +1,7 @@
 # Asynchronous Event Emitter
 
-Nodejs Events runs in synchronous mode. This means that event listeners that are `async` cannot be `await`ed. This package extends the [`EventEmitter`](https://nodejs.org/api/events.html#events_class_eventemitter) class and enables the promises to chain into the `emit` event.
+Nodejs core _Events system_ is synchronous. This means we can't `await` for listeners and `async` listeners can't be caught.
+This package extends [`EventEmitter`](https://nodejs.org/api/events.html#events_class_eventemitter) and enables event emmiters to `await` for listeners to resolve in a concise way.
 
 ## Install
 
@@ -23,9 +24,10 @@ events.on('event', () => {
 });
 
 // but it await events
-async function test() {
+async function main() {
   await events.emit('event');
   console.log('event awaited');
 }
-test();
+
+main();
 ```
