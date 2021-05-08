@@ -9,7 +9,7 @@
     "url": "https://github.com/thiagof/asynchronous-emitter.git"
   },
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.21"
   },
   "scripts": {
     "test": "NODE_ENV=test mocha --reporter spec --exclude node_modules --recursive --watch './*/*.spec.js'"
